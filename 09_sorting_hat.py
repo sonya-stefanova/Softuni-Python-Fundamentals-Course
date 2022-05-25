@@ -1,0 +1,19 @@
+is_valid = True
+name = input()
+while name != "Welcome!":
+    if name == "Voldemort":
+        is_valid = False
+        print("You must not speak of that name!")
+        break
+    else:
+        if len(name) < 5:
+            print(f"{name} goes to Gryffindor.")
+        elif len(name) == 5:
+            print(f"{name} goes to Slytherin.")
+        elif len(name) == 6:
+            print(f"{name} goes to Ravenclaw.")
+        elif len(name) > 6:
+            print(f"{name} goes to Hufflepuff.")
+    name = input()
+if is_valid:
+    print("Welcome to Hogwarts.")
