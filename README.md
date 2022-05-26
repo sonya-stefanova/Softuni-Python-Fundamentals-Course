@@ -1,0 +1,2 @@
+# softuni_python_fundamentals_exersises
+Python_Fundamentals_Course_SoftUni
