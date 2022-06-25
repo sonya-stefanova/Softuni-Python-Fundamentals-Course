@@ -1,12 +1,13 @@
 train_ticket = 150
 # {type->price|type->price|type->price……|type->price}
 # {budget}
+
 list_of_items = input().split("|")
-print(list_of_items)
 budget = float(input())
 enough_money = False
 list_of_prices = []
 new_prices = []
+
 for items in list_of_items:
     args = items.split("->")
     item_type = args[0]
@@ -25,9 +26,9 @@ for items in list_of_items:
 
     if is_valid:
         if budget > price:
-            budget-=price
+            budget -= price
             list_of_prices.append(price)
-            new_prices.append(price*1.4)
+            new_prices.append(price * 1.4)
 
 for new_price in new_prices:
     print(f'{new_price:.2f}', end=' ')

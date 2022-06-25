@@ -1,4 +1,5 @@
 #The Lift - MidExam
+
 people_on_queue = int(input())
 
 lift = list(map(int, input().split(' ')))

@@ -1,3 +1,4 @@
+
 number_of_words = int(input())
 counter = 0
 

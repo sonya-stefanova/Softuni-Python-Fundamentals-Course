@@ -1,12 +1,13 @@
 happiness = input().split()
 happiness_numbers = list(map(int, happiness))
 factor = int(input())
+
 happiness_multiplies = [each_num*factor for each_num in happiness_numbers]
 average_happiness = sum(happiness_multiplies)/len(happiness_numbers)
 all_happy_employees = [el for el in happiness_multiplies if el>=average_happiness]
-happy_message = "Employees are happy!"
 all_sad_employees = [el for el in happiness_multiplies if el<average_happiness]
 
+happy_message = "Employees are happy!"
 sad_message = "Employees are not happy!"
 
 if len(all_sad_employees)>len(happiness_multiplies)/2:

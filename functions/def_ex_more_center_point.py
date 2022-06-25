@@ -6,7 +6,7 @@ def calc_closest_point(a, b, c, d):
     second_distance = 0
     first_distance = math.sqrt(math.pow(a, 2) + math.pow(b, 2))
     second_distance = math.sqrt(math.pow(c, 2) + math.pow(d, 2))
-    if first_distance < second_distance:
+    if first_distance < second_dis  tance:
         return f"({a}, {b})"
     elif second_distance < first_distance:
         return f"({c}, {d})"

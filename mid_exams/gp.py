@@ -5,10 +5,10 @@ weight = float(input()) * 1000
 
 days = 30
 
-for day in range(days):
+for day in range(1, days+1):
     food -= 300
     if day % 2 == 0:
-        hay -= 0.5 * food
+        hay -= 0.05 * food
 
     if day % 3 == 0:
         cover -= 1 / 3 * weight

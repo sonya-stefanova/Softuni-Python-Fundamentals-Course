@@ -1,25 +1,19 @@
-initial_list_of_people = input().split(' ')
-k = int(input())
-executed_persons = []
-people_count = len(initial_list_of_people) # we need to know how many people are there
+circle_of_people = input().split(' ')
+current_kill = int(input())
+executed = []
+counter = 0
 
 index = 0
-num = 1
+while len(circle_of_people) > 0:
+    counter += 1
+    if counter % current_kill == 0:
+        executed.append(circle_of_people.pop(index))
+    else:
+        index += 1
 
-while people_count > 0:
-    new_list = [] #temporary variable where the remainder people will be saved
+    if index >= len(circle_of_people):
+        index = 0
 
-    for i, ch in enumerate(initial_list_of_people):
-        person = initial_list_of_people[i]
+result = ','.join(x for x in executed)
 
-        if num % k == 0:
-            executed_persons.append(int(person))
-        else:
-            new_list.append(person)
-
-        num += 1
-
-    initial_list_of_people = new_list
-    index = (index + 1) % people_count
-
-print(str(executed_persons).replace(' ', ''))
+print(f'[{result}]')

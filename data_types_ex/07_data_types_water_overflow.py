@@ -1,13 +1,16 @@
 capacity = 255
-water_counter = 0
 number_of_lines = int(input())
-insufficient_capacity = False
+total_liters = 0
+
 for line in range(number_of_lines):
-    liters_of_water = int(input())
-    if capacity - liters_of_water < 0:
-       insufficient_capacity = True
-       print("Insufficient capacity")
-       continue
-    water_counter+=liters_of_water
-    capacity-=liters_of_water
-print(water_counter)
+
+    liters_of_water_to_pour = int(input())
+
+    if liters_of_water_to_pour > capacity:
+        print("Insufficient capacity!" )
+        continue
+
+    capacity -= liters_of_water_to_pour
+    total_liters += liters_of_water_to_pour
+
+print(total_liters)
