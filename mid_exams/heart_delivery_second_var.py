@@ -6,6 +6,7 @@ position = 0
 while commands != "Love!":
     commands = commands.split(" ")
     index = int(commands[1])
+
     position += index
     if position >= len(neighborhood):
         position = 0

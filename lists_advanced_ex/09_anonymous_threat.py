@@ -1,11 +1,10 @@
-def merge(command_info:list, words):
+def marge(command: list, words: list):
+    start_index = int(command[1])
+    end_index = int(command[2])
 
-    start_index = command_info[1]
-    last_index = command_info[2]
-
-    if last_index > len(words):
+    if end_index > len(words):
         end_index = len(words) - 1
-    if last_index < start_index:
+    if end_index < start_index:
         return words
 
     new_words = [words[i] for i in range(start_index, end_index)]
@@ -15,13 +14,12 @@ def merge(command_info:list, words):
     words.insert(start_index, new_words)
     return words
 
-def divide(command_info:list, words: list):
-    index = int(command_info[1])
-    partitions = int(command_info[2])
 
+def divine(command: list, words: list):
+    index = int(command[1])
+    partitions = int(command[2])
     step = round(len(words[index])/partitions)
     current_word = words[index]
-
     if step % 2 == 0:
         words.remove(words[index])
         new_words = [current_word[word:step+word] for word in range(0, len(current_word), step)]
@@ -36,14 +34,17 @@ def divide(command_info:list, words: list):
             words.insert(index + i, new_words[i])
         return words
 
-words = input().split(" ")
-words = list(filter(lambda word: word != '', words))
-command = input()
-command_info = command.split(" ")
 
+
+words = input().split(' ')
+words = list(filter(lambda word: word != '', words))
+command = input().split(' ')
 while command[0] != "3:1":
-    text_command = command_info[0]
-    if text_command == "merge":
-        pass
-    elif text_command == "divide":
-        pass
+    current_command = command[0]
+    if current_command == 'merge':
+        marge(command, words)
+    elif current_command == 'divide':
+        divine(command, words)
+    command = input().split(' ')
+
+print(' '.join(words))

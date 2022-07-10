@@ -22,8 +22,10 @@ def swap_command(first_title, second_title, lessons):
     if first_title in lessons and second_title in lessons:
         index_of_first_lessons_title = lessons.index(first_title)
         index_of_second_lessons_title = lessons.index(second_title)
+
         lessons[index_of_first_lessons_title], lessons[index_of_second_lessons_title] = \
             lessons[index_of_second_lessons_title], lessons[index_of_first_lessons_title]
+
         if f'{first_title}-Exercise' in lessons:
             lessons.remove(f'{first_title}-Exercise')
             lessons.insert(index_of_second_lessons_title + 1, f'{first_title}-Exercise')

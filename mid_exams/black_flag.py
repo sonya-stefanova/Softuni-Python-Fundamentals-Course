@@ -1,3 +1,4 @@
+
 target_plunder_reached = False
 
 days = int(input())
