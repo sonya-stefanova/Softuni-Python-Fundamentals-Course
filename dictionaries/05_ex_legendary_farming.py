@@ -1,9 +1,9 @@
 materials = input().split(" ")
 materials_dict = dict()
 
-is_win_the_race = True
+is_win_the_race = False
 
-while is_win_the_race:
+while not is_win_the_race:
     for i in range(0, len(materials), 2):
         material = materials[i+1].lower()
         quantity = int(materials[i])
@@ -17,24 +17,24 @@ while is_win_the_race:
             if materials_dict["shards"] >= 250:
                 print("Shadowmourne obtained!")
                 materials_dict["shards"] -= 250
-                is_win_the_race = False
+                is_win_the_race = True
                 break
 
         if "fragments" in materials_dict.keys():
             if materials_dict["fragments"] >= 250:
                 print("Valanyr obtained!")
                 materials_dict["fragments"] -= 250
-                is_win_the_race = False
+                is_win_the_race = True
                 break
 
         if 'motes' in materials_dict.keys():
             if materials_dict["motes"] >= 250:
                 print("Dragonwrath obtained!")
                 materials_dict["motes"] -= 250
-                is_win_the_race = False
+                is_win_the_race = True
                 break
 
-    if not is_win_the_race:
+    if is_win_the_race:
         break
     materials = input().split(" ")
 
