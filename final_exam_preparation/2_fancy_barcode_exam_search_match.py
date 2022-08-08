@@ -14,11 +14,7 @@ for i in range(num):
 
         if product_group == "":
             print(f'Product group: 00')
-
         else:
             print(f"Product group: {product_group}")
     else:
         print("Invalid barcode")
-
-
-

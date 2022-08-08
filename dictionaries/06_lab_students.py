@@ -11,6 +11,7 @@ while ":" in data:
 
 searched_course = data
 searched_course_as_list = searched_course.split("_")
+print(searched_course_as_list)
 searched_course = ' '.join(searched_course_as_list)
 
 for course_name in courses:

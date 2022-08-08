@@ -11,5 +11,5 @@ print(bakery)
 
 # ----------------- 2nd variant ------------------------------------------------------
 # bakery_list = input().split(" ")
-# bakery = {bakery_list[item]: int(bakery_list[item+1]) for item in range(0, len(bakery_list), 2)}
+# bakery = {bakery_list[i]: int(bakery_list[i+1]) for i in range(0, len(bakery_list), 2)}
 # print(bakery)
