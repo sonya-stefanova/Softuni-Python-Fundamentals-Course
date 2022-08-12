@@ -1,5 +1,0 @@
-num = input()
-num_str = str(num)
-list_num = list(map(int,num_str))
-list_num.sort(reverse = True)
-print(list_num)
