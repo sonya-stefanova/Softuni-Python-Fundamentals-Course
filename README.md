@@ -1,2 +1,2 @@
-# softuni_python_fundamentals_exersises
+# SoftUni Python Fundamentals Course
 Python_Fundamentals_Course_SoftUni
